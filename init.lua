@@ -18,7 +18,6 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local opts = {}
 require("lazy").setup("plugins")
 
 vim.cmd("highlight LineNr guibg=NONE")
