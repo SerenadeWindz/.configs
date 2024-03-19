@@ -22,3 +22,4 @@ local opts = {}
 require("lazy").setup("plugins")
 
 vim.cmd("highlight LineNr guibg=NONE")
+vim.cmd("highlight SignColumn guibg=NONE")
