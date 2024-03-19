@@ -2,6 +2,8 @@ vim.cmd("set tabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.g.mapleader=" "
 
+vim.wo.number = true
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -19,6 +21,4 @@ vim.opt.rtp:prepend(lazypath)
 local opts = {}
 require("lazy").setup("plugins")
 
-
-
-
+vim.cmd("highlight LineNr guibg=NONE")
