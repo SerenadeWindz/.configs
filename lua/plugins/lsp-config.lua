@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "cmake", "rust_analyzer" },
+				ensure_installed = { "lua_ls", "clangd", "cmake", "rust_analyzer", "asm_lsp" },
 			})
 		end,
 	},
@@ -24,6 +24,7 @@ return {
 			lspconfig.clangd.setup({capabilities = capabilities})
 			lspconfig.cmake.setup({capabilities = capabilities})
 			lspconfig.rust_analyzer.setup({capabilities = capabilities})
+			lspconfig.asm_lsp.setup({capabilities = capabilities})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "D", vim.lsp.buf.definition, {})
